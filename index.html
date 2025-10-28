@@ -94,12 +94,26 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            gap: 12px;
         }
 
         .logo img {
             height: 50px;
             width: auto;
             object-fit: contain;
+            display: block;
+        }
+
+        .logo .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-black);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .logo img { height: 40px; }
+            .logo .logo-text { font-size: 16px; }
         }
 
         .nav-links {
@@ -617,9 +631,10 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">
-                <img src="images/logo.PNG" alt="Qwabena Studios Logo"> 
-            </a>
+            <a href="#home" class="logo"> 
+                <img src="images/logo.PNG" alt="Qwabena Studios Logo">
+                <span class="logo-text">Qwabena Studios Global</span>
+            </a> 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#discover">Discover</a></li>
